@@ -457,18 +457,18 @@ export default function Lideres({
       </div>
 
       {/* Paginación */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-8">
-        <div className="flex items-center gap-3">
+      <div className="flex flex-row items-center justify-center gap-2 sm:gap-4 md:gap-6 mt-8 w-full px-1">
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <Button
             size="sm"
             variant="outline"
-            className="w-10 h-10 rounded-lg border-gray-200 dark:border-neutral-700 hover:bg-blue-50 dark:hover:bg-blue-950/50 text-blue-600 dark:text-blue-400 transition-all shadow-sm"
+            className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg border-gray-200 dark:border-neutral-700 hover:bg-blue-50 dark:hover:bg-blue-950/50 text-blue-600 dark:text-blue-400 transition-all shadow-sm"
             onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
             disabled={currentPage === 1 || itemsPerPage === "all"}
           >
             <ChevronLeft className="h-5 w-5" />
           </Button>
-          <div className="bg-white dark:bg-neutral-900 px-4 py-2 rounded-lg border border-gray-100 dark:border-neutral-700 shadow-sm min-w-[120px] text-center">
+          <div className="bg-white dark:bg-neutral-900 px-3 sm:px-4 py-2 rounded-lg border border-gray-100 dark:border-neutral-700 shadow-sm min-w-[88px] sm:min-w-[120px] text-center">
             <span className="text-sm font-black text-gray-900 dark:text-gray-100">
               {currentPage} / {totalPages || 1}
             </span>
@@ -476,7 +476,7 @@ export default function Lideres({
           <Button
             size="sm"
             variant="outline"
-            className="w-10 h-10 rounded-lg border-gray-200 dark:border-neutral-700 hover:bg-blue-50 dark:hover:bg-blue-950/50 text-blue-600 dark:text-blue-400 transition-all shadow-sm"
+            className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg border-gray-200 dark:border-neutral-700 hover:bg-blue-50 dark:hover:bg-blue-950/50 text-blue-600 dark:text-blue-400 transition-all shadow-sm"
             onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
             disabled={currentPage === totalPages || itemsPerPage === "all"}
           >
@@ -484,7 +484,7 @@ export default function Lideres({
           </Button>
         </div>
 
-        <div className="flex items-center gap-2 bg-white dark:bg-neutral-900 px-4 py-2 rounded-lg border border-gray-100 dark:border-neutral-700 shadow-sm">
+        <div className="flex items-center gap-2 bg-white dark:bg-neutral-900 px-3 sm:px-4 py-2 rounded-lg border border-gray-100 dark:border-neutral-700 shadow-sm shrink-0">
           <select
             value={itemsPerPage}
             onChange={(e) => {
