@@ -70,8 +70,14 @@ function ResumenTotales({
             <Bar
               dataKey="value"
               barSize={22}
-              shape={(props: { x?: number; y?: number; width?: number; height?: number; index?: number }) => {
-                const { x = 0, y = 0, width = 0, height = 0, index = 0 } = props;
+              shape={(rawProps: unknown) => {
+                const { x = 0, y = 0, width = 0, height = 0, index = 0 } = rawProps as {
+                  x?: number;
+                  y?: number;
+                  width?: number;
+                  height?: number;
+                  index?: number;
+                };
                 const entry = datos[index];
                 return (
                   <Rectangle

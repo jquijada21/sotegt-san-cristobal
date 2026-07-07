@@ -19,7 +19,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { eliminar } from "./acciones";
 import { obtenerConteoPadronAction } from "./actions/afiliados";
 import { calcularNivelCompromiso } from "@/lib/nivelCompromiso";
-import Swal from "sweetalert2";
+import { swalNoEliminarCelula } from "@/lib/swalTheme";
 
 export interface Lider {
   id: string;
@@ -391,12 +391,7 @@ export default function Lideres({
                     onClick={(e) => {
                       e.stopPropagation();
                       if (tieneAfiliados) {
-                        Swal.fire({
-                          icon: "error",
-                          title: "No se puede eliminar",
-                          text: "No se puede eliminar porque hay afiliados en el sistema asignados a esta célula.",
-                          confirmButtonColor: "#2563eb",
-                        });
+                        swalNoEliminarCelula();
                       } else {
                         eliminar(lider, onDataChange);
                       }
@@ -445,12 +440,7 @@ export default function Lideres({
                         onClick={(e) => {
                           e.stopPropagation();
                           if (tieneAfiliados) {
-                            Swal.fire({
-                              icon: "error",
-                              title: "No se puede eliminar",
-                              text: "No se puede eliminar porque hay afiliados en el sistema asignados a esta célula.",
-                              confirmButtonColor: "#2563eb",
-                            });
+                            swalNoEliminarCelula();
                           } else {
                             eliminar(lider, onDataChange);
                           }
