@@ -1,12 +1,12 @@
 {
-  "name": "SOTE - Sistema de Organización Territorial Estratégica, Santa María Ixhuatán",
-  "short_name": "SOTE Santa María Ixhuatán",
+  "name": "SOTE - Sistema de Organización Territorial Estratégica, Pachalum, Quiché",
+  "short_name": "SOTE Pachalum",
   "theme_color": "#1e40af",
   "background_color": "#ffffff",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "description": "Sistema de Gestión y Organización territorial Estratégica, Santa María Ixhuatán",
+  "description": "Sistema de Gestión y Organización territorial Estratégica, Pachalum, Quiché",
   "orientation": "portrait",
   "icons": [
     {
