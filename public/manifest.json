@@ -1,12 +1,12 @@
 {
-  "name": "SOTE - Sistema de Organización Territorial Estratégica, Pachalum, Quiché",
-  "short_name": "SOTE Pachalum",
+  "name": "SOTE - Sistema de Organización Territorial Estratégica, San Cristobal",
+  "short_name": "SOTE GT",
   "theme_color": "#1e40af",
   "background_color": "#ffffff",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "description": "Sistema de Gestión y Organización territorial Estratégica, Pachalum, Quiché",
+  "description": "Sistema de Gestión y Organización territorial Estratégica, San Cristobal",
   "orientation": "portrait",
   "icons": [
     {

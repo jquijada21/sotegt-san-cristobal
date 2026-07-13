@@ -39,6 +39,7 @@ import {
   type Sector,
 } from "@/components/afiliados/forms/afiliados/catalogos";
 
+
 interface Props {
   showMetas?: boolean;
   allowEditing?: boolean;
@@ -450,33 +451,30 @@ export default function ConfiguracionSistema({
           <div className="flex bg-gray-100 dark:bg-neutral-800 p-1 rounded-xl gap-1">
             <button
               onClick={() => setActiveTab("candidato")}
-              className={`flex-1 py-2 text-[10px] sm:text-xs font-bold uppercase rounded-lg transition-all ${
-                activeTab === "candidato"
+              className={`flex-1 py-2 text-[10px] sm:text-xs font-bold uppercase rounded-lg transition-all ${activeTab === "candidato"
                   ? "bg-white dark:bg-neutral-700 text-blue-700 dark:text-blue-300 shadow-sm"
                   : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
-              }`}
+                }`}
             >
               Candidato
             </button>
             {showMetas && (
               <button
                 onClick={() => setActiveTab("metas")}
-                className={`flex-1 py-2 text-[10px] sm:text-xs font-bold uppercase rounded-lg transition-all ${
-                  activeTab === "metas"
+                className={`flex-1 py-2 text-[10px] sm:text-xs font-bold uppercase rounded-lg transition-all ${activeTab === "metas"
                     ? "bg-white dark:bg-neutral-700 text-blue-700 dark:text-blue-300 shadow-sm"
                     : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
-                }`}
+                  }`}
               >
                 Metas
               </button>
             )}
             <button
               onClick={() => setActiveTab("lugares")}
-              className={`flex-1 py-1 text-[10px] sm:text-[10px] font-bold uppercase rounded-lg transition-all whitespace-pre-line leading-tight ${
-                activeTab === "lugares"
+              className={`flex-1 py-1 text-[10px] sm:text-[10px] font-bold uppercase rounded-lg transition-all whitespace-pre-line leading-tight ${activeTab === "lugares"
                   ? "bg-white dark:bg-neutral-700 text-blue-700 dark:text-blue-300 shadow-sm"
                   : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
-              }`}
+                }`}
             >
               {"Lugares y\nSectores"}
             </button>
@@ -604,14 +602,12 @@ export default function ConfiguracionSistema({
                 <button
                   type="button"
                   onClick={() => setPadronPrecargado((prev) => !prev)}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none ${
-                    padronPrecargado ? "bg-blue-600" : "bg-gray-300"
-                  }`}
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none ${padronPrecargado ? "bg-blue-600" : "bg-gray-300"
+                    }`}
                 >
                   <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white shadow-md transition-transform ${
-                      padronPrecargado ? "translate-x-6" : "translate-x-1"
-                    }`}
+                    className={`inline-block h-4 w-4 transform rounded-full bg-white shadow-md transition-transform ${padronPrecargado ? "translate-x-6" : "translate-x-1"
+                      }`}
                   />
                 </button>
               </div>
@@ -703,11 +699,10 @@ export default function ConfiguracionSistema({
                         {sectoresFiltrados.map((s) => (
                           <div
                             key={s.id}
-                            className={`flex items-center gap-1 transition-colors ${
-                              sectorSeleccionado === s.id
+                            className={`flex items-center gap-1 transition-colors ${sectorSeleccionado === s.id
                                 ? "bg-amber-100 dark:bg-amber-950/70 text-amber-900 dark:text-amber-200"
                                 : "hover:bg-amber-50 dark:hover:bg-amber-950/40 text-gray-700 dark:text-gray-300"
-                            }`}
+                              }`}
                           >
                             {editandoSectorId === s.id ? (
                               <div className="flex items-center gap-1 flex-1 px-2 py-1.5">
@@ -754,11 +749,10 @@ export default function ConfiguracionSistema({
                                     setSectorSeleccionado(s.id);
                                     setSectorQuery(formatSectorLabel(s));
                                   }}
-                                  className={`flex-1 text-left px-3 py-2 text-sm flex items-center justify-between ${
-                                    sectorSeleccionado === s.id
+                                  className={`flex-1 text-left px-3 py-2 text-sm flex items-center justify-between ${sectorSeleccionado === s.id
                                       ? "font-bold"
                                       : ""
-                                  }`}
+                                    }`}
                                 >
                                   {formatSectorLabel(s)}
                                   {sectorSeleccionado === s.id && (
@@ -976,7 +970,7 @@ export default function ConfiguracionSistema({
                           <span className="text-blue-600 text-sm md:text-2xl">
                             {Math.ceil(
                               currentConfig.objetivo_total /
-                                currentConfig.meta_por_lider,
+                              currentConfig.meta_por_lider,
                             )}{" "}
                             líderes
                           </span>{" "}
@@ -1029,7 +1023,7 @@ export default function ConfiguracionSistema({
                     >
                       {Math.ceil(
                         currentConfig.objetivo_total /
-                          currentConfig.meta_por_lider,
+                        currentConfig.meta_por_lider,
                       )}{" "}
                       <span className="text-gray-500">líderes nesesarios</span>
                     </motion.p>

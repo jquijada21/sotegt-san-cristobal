@@ -142,7 +142,7 @@ export function LoginForm() {
         className="flex flex-col items-center mb-8 w-full text-center"
       >
         <h2 className="text-2xl md:text-4xl font-bold leading-tight bg-gradient-to-r from-blue-800 via-blue-400 to-blue-800 dark:from-blue-400 dark:via-blue-300 dark:to-blue-500 bg-[length:200%_auto] text-transparent bg-clip-text animate-text-shine">
-          Pachalum, Quiché
+          San Cristobal
         </h2>
 
       </motion.div>
