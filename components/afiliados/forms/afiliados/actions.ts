@@ -16,7 +16,7 @@ export async function guardarAfiliadoAction(formData: any, idEditar?: string) {
     const { data } = await query;
     if (data && data.length > 0) {
       const existente = data[0];
-      let liderNombre = "otro líder";
+      let liderNombre = "otro enlace";
       if (existente.lider_id) {
         const { data: perfil } = await supabase
           .from("info_perfil")
@@ -121,8 +121,8 @@ export async function buscarDpiEnAfiliadosAction(dpi: string) {
 
   if (!data) return null;
 
-  // Buscar el nombre del líder
-  let liderNombre = "otro líder";
+  // Buscar el nombre del enlace
+  let liderNombre = "otro enlace";
   if (data.lider_id) {
     const { data: perfil } = await supabase
       .from("info_perfil")

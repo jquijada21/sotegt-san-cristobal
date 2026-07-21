@@ -622,7 +622,7 @@ export default function AfiliadosForm({
         </p>
       </div>
       <p className="text-sm leading-tight">
-        Célula del líder:{" "}
+        Célula del enlace:{" "}
         <span className="font-black text-blue-700 dark:text-blue-400">{yaRegistrado.liderNombre}</span>
       </p>
     </div>

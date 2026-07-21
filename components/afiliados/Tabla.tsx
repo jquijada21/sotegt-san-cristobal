@@ -243,7 +243,7 @@ export default function Tabla({
               {esLider && (
                 <div className="absolute -top-2.5 left-3 z-10">
                   <span className="flex items-center gap-1 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-[9px] font-black px-2 py-0.5 rounded-full uppercase shadow-sm border border-orange-400">
-                    <Crown className="w-2.5 h-2.5" /> Líder
+                    <Crown className="w-2.5 h-2.5" /> Enlace
                   </span>
                 </div>
               )}
@@ -476,7 +476,7 @@ export default function Tabla({
                       disabled={!puedeEliminar}
                       title={
                         !puedeEliminar
-                          ? "No se puede eliminar al líder mientras tenga integrantes"
+                          ? "No se puede eliminar al enlace mientras tenga integrantes"
                           : undefined
                       }
                       className="inline-flex items-center justify-center rounded-lg px-3 py-1.5 gap-1.5 text-red-600 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-950/50 hover:text-red-900 dark:hover:text-red-300 text-xs font-black uppercase transition-colors disabled:opacity-40"

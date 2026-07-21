@@ -51,7 +51,7 @@ export default function UsersTable({ usuarios }: Props) {
                   <td className="p-2 border-[1.5px] border-gray-300">{usuario.email}</td>
                   <td className="p-2 border-[1.5px] border-gray-300">{usuario.nombres || '—'}</td>
                   <td className="p-2 border-[1.5px] border-gray-300">{usuario.apellidos || '—'}</td>
-                  <td className="p-2 border-[1.5px] border-gray-300">{usuario.rol || '—'}</td>
+                  <td className="p-2 border-[1.5px] border-gray-300">{usuario.rol === 'LIDER' ? 'ENLACE' : (usuario.rol || '—')}</td>
                   <td className="p-2 text-center border-[1.5px] border-gray-300">
                     <Button
                       variant="ghost"

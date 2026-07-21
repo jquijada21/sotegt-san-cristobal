@@ -200,7 +200,7 @@ export default function EditarUsuarioForm() {
           <option value="">-- Seleccione un rol --</option>
           {rolesParaSelector.map((r) => (
             <option key={r.id} value={r.id.toString()}>
-              {r.nombre}
+              {r.nombre === "LIDER" ? "ENLACE" : r.nombre}
             </option>
           ))}
         </select>

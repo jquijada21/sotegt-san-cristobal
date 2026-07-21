@@ -139,7 +139,7 @@ export const AFILIADOS_ESTADISTICAS_DEMO: Afiliado[] = (() => {
           politica: politicaNombre,
           sub_politica: subPolitica,
           created_at: new Date().toISOString(),
-          lider_nombre: `Líder Demo ${(sIdx % 4) + 1}`,
+          lider_nombre: `Enlace Demo ${(sIdx % 4) + 1}`,
           lider_email: `lider${(sIdx % 4) + 1}`,
           lugar_nombre: lugar,
           sector_nombre: sector.nombre,

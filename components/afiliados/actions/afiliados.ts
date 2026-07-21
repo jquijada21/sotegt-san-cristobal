@@ -79,7 +79,7 @@ export async function obtenerAfiliadosAction(liderId?: string) {
         : afiliado.sub_politica || null,
       lider_nombre: perfilLider
         ? `${perfilLider.nombres} ${perfilLider.apellidos}`
-        : "Sin Líder",
+        : "Sin Enlace",
       lider_email: "",
     };
   });

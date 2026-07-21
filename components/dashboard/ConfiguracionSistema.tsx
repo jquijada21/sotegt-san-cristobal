@@ -399,11 +399,11 @@ export default function ConfiguracionSistema({
       return;
     }
     if (metaPorLider <= 0) {
-      showWarningToast("La meta por líder debe ser mayor a 0");
+      showWarningToast("La meta por enlace debe ser mayor a 0");
       return;
     }
     if (metaCelulaMinima >= metaPorLider) {
-      showWarningToast("La meta mínima debe ser menor que la meta por líder");
+      showWarningToast("La meta mínima debe ser menor que la meta por enlace");
       return;
     }
 
@@ -565,7 +565,7 @@ export default function ConfiguracionSistema({
                 </div>
                 <div className="space-y-1.5">
                   <label className="text-xs font-black text-blue-800 dark:text-blue-300 uppercase ml-1">
-                    Meta por Líder
+                    Meta por Enlace
                   </label>
                   <Input
                     type="number"
@@ -619,7 +619,7 @@ export default function ConfiguracionSistema({
                       Requerimiento de Células
                     </span>
                     <span className="text-base font-bold">
-                      Líderes necesarios para la meta
+                      Enlaces necesarios para la meta
                     </span>
                   </div>
                   <div className="text-4xl font-black">
@@ -972,7 +972,7 @@ export default function ConfiguracionSistema({
                               currentConfig.objetivo_total /
                               currentConfig.meta_por_lider,
                             )}{" "}
-                            líderes
+                            enlaces
                           </span>{" "}
                           para la meta
                         </p>
@@ -1005,7 +1005,7 @@ export default function ConfiguracionSistema({
                   </div>
                   <div className="flex flex-col items-center">
                     <span className="text-[10px] font-bold text-gray-500 uppercase mb-1">
-                      Meta por Líder
+                      Meta por Enlace
                     </span>
                     <span className="text-xl md:text-2xl font-black text-blue-500">
                       {currentConfig.meta_por_lider
@@ -1025,7 +1025,7 @@ export default function ConfiguracionSistema({
                         currentConfig.objetivo_total /
                         currentConfig.meta_por_lider,
                       )}{" "}
-                      <span className="text-gray-500">líderes nesesarios</span>
+                      <span className="text-gray-500">enlaces nesesarios</span>
                     </motion.p>
                   )}
               </div>

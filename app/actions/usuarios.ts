@@ -106,7 +106,7 @@ export const signUpAction = async (formData: FormData) => {
     return { error: "Todos los campos son obligatorios." };
   }
 
-  // Ya no verificamos DPI aquí porque el líder lo registrará en la tabla afiliados después
+  // Ya no verificamos DPI aquí porque el enlace lo registrará en la tabla afiliados después
 
   const { data, error } = await supabaseAdmin.auth.admin.createUser({
     email,

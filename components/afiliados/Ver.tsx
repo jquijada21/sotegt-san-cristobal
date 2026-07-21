@@ -78,8 +78,7 @@ export default function Ver() {
 
   const puedeCrearLider =
     rol === "ADMINISTRADOR" || rol === "SUPER" || rol === "ADMIN" || rol === "DOCUMENTADOR";
-  const puedeSimular =
-    rol === "ADMINISTRADOR" || rol === "SUPER" || rol === "ADMIN" || rol === "DOCUMENTADOR";
+  const puedeSimular = rol === "SUPER";
   const esAdminOSuper =
     rol === "ADMINISTRADOR" || rol === "SUPER" || rol === "ADMIN";
   const esLider = rol === "LIDER";
@@ -290,7 +289,7 @@ export default function Ver() {
                 variant="outline"
                 className="gap-2 w-full text-xs md:text-xl font-bold border-green-500 dark:border-green-600 text-green-700 dark:text-green-400 bg-white/70 dark:bg-white/5 hover:bg-green-100 dark:hover:bg-green-950/55 backdrop-blur-sm shadow-none transition-colors"
               >
-                <UserPlus className="w-4 h-4 md:w-6 md:h-6" /> Nuevo Líder
+                <UserPlus className="w-4 h-4 md:w-6 md:h-6" /> Nuevo Enlace
               </Button>
             )}
           </div>
@@ -318,7 +317,7 @@ export default function Ver() {
             />
           ) : (
             <div className="text-center text-gray-500 dark:text-gray-400 mt-8 border border-gray-200 dark:border-neutral-700 rounded-lg p-4">
-              No se encontró tu perfil de líder.
+              No se encontró tu perfil de enlace.
             </div>
           )
         ) : (
@@ -333,7 +332,7 @@ export default function Ver() {
                 }`}
               >
                 <Crown className={`w-4 h-4 md:w-5 md:h-5 ${activeTab === "Lideres" ? "text-orange-500" : ""}`} />
-                Líderes
+                Enlaces
               </button>
 
               <button

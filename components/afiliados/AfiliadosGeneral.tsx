@@ -62,7 +62,7 @@ export default function AfiliadosGeneral({
 
   const encabezado = [
     "No.", "Nombres", "Apellidos", "DPI", "Padrón", "Teléfono", "Teléfono 2", "Teléfono 3",
-    "Edad", "Sexo", "Empadronado", "Líder", "Ubicación", "Sector",
+    "Edad", "Sexo", "Empadronado", "Enlace", "Ubicación", "Sector",
     "Programa de Interés", "Religión", "Condición Especial", "Fecha de Registro"
   ];
 
@@ -100,7 +100,7 @@ export default function AfiliadosGeneral({
         calcularEdad(a.nacimiento),
         a.sexo === "M" ? "Masculino" : "Femenino",
         a.empadronado ? "Sí" : "No",
-        lider ? `${lider.nombres} ${lider.apellidos}` : "Sin Líder",
+        lider ? `${lider.nombres} ${lider.apellidos}` : "Sin Enlace",
         a.lugar_nombre || "—",
         a.sector_nombre || "—",
         a.politica || "—",
@@ -120,7 +120,7 @@ export default function AfiliadosGeneral({
       afiliadosAgrupados.forEach(({ lider, afiliados: list }) => {
         const nombreHoja = (lider
           ? `${lider.nombres} ${lider.apellidos}`
-          : "Sin Lider").slice(0, 31);
+          : "Sin Enlace").slice(0, 31);
         const filas = [encabezado, ...construirFilasGrupo(list, lider)];
         const ws = XLSX.utils.aoa_to_sheet(filas);
         XLSX.utils.book_append_sheet(wb, ws, nombreHoja);
@@ -139,7 +139,7 @@ export default function AfiliadosGeneral({
       const wb = XLSX.utils.book_new();
       const nombreHoja = (lider
         ? `${lider.nombres} ${lider.apellidos}`
-        : "Sin Lider").slice(0, 31);
+        : "Sin Enlace").slice(0, 31);
       const filas = [encabezado, ...construirFilasGrupo(list, lider)];
       const ws = XLSX.utils.aoa_to_sheet(filas);
       XLSX.utils.book_append_sheet(wb, ws, nombreHoja);
@@ -216,7 +216,7 @@ export default function AfiliadosGeneral({
       <div className="flex items-center justify-between px-1 py-2 flex-wrap gap-2">
         <div className="flex items-center gap-4 flex-wrap">
           <span className="flex items-center gap-1.5 text-[11px] font-bold text-orange-700">
-            <Crown className="w-3.5 h-3.5 text-orange-500" /> Líder
+            <Crown className="w-3.5 h-3.5 text-orange-500" /> Enlace
           </span>
           <span className="flex items-center gap-1.5 text-[11px] font-bold text-purple-700">
             <Heart className="w-3.5 h-3.5 text-purple-500" /> Familiar
@@ -250,7 +250,7 @@ export default function AfiliadosGeneral({
         const isLiderAbierto = liderAbiertoId === liderId;
         const nombreLider = lider
           ? `${lider.nombres} ${lider.apellidos}`
-          : "Miembros sin Líder asignado";
+          : "Miembros sin Enlace asignado";
         const colorClase = lider
           ? (lider.rol === "SUPER" || lider.rol === "ADMINISTRADOR" || lider.rol === "ADMIN")
             ? "bg-indigo-50 dark:bg-indigo-950/40 border-indigo-200 dark:border-indigo-800"

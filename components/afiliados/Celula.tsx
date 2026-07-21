@@ -230,7 +230,7 @@ export default function Celula({
                   >
                     {totalEnGrupo === 0 ? (
                       <>
-                        <UserPlus className="w-5 h-5" /> Registrarme como Líder
+                        <UserPlus className="w-5 h-5" /> Registrarme como Enlace
                       </>
                     ) : (
                       <>

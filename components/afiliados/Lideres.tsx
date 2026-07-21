@@ -221,7 +221,7 @@ export default function Lideres({
 
       <div className="flex flex-row flex-wrap justify-between items-center gap-x-3 gap-y-1 mb-2 px-2">
         <span className="text-[10px] sm:text-xs font-bold uppercase tracking-tight whitespace-nowrap">
-          <span className="text-gray-500 dark:text-gray-400">Líderes registrados:</span>{" "}
+          <span className="text-gray-500 dark:text-gray-400">Enlaces registrados:</span>{" "}
           <span className="text-blue-600 dark:text-blue-400">
             {lideres.length} de {lideresRequeridos.toLocaleString()} (
             {progresoLideres.toFixed(1)}%)
@@ -396,7 +396,7 @@ export default function Lideres({
                         eliminar(lider, onDataChange);
                       }
                     }}
-                    title="Eliminar líder"
+                    title="Eliminar enlace"
                   >
                     <Trash2 className="h-4 w-4" />
                     Eliminar
@@ -432,7 +432,7 @@ export default function Lideres({
                           onEditar(lider);
                         }}
                       >
-                        <Pencil className="h-4 w-4 mr-2" /> Editar Líder
+                        <Pencil className="h-4 w-4 mr-2" /> Editar Enlace
                       </Button>
                       <Button
                         variant="ghost"

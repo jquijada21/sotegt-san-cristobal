@@ -880,16 +880,16 @@ export default function ReporteLideresClasificacion({
 
   const subtituloCabeceraReporte =
     pestañaReporte === "lideres"
-      ? `Orden: alto → medio → bajo · ${datosEfectivos.length} líderes${simulacionDatosActivada ? " · vista simulada" : ""}`
+      ? `Orden: alto → medio → bajo · ${datosEfectivos.length} enlaces${simulacionDatosActivada ? " · vista simulada" : ""}`
       : pestañaReporte === "enlaces"
-        ? `Titulares y familiares por célula · ${lideresEnVista.length} líderes en vista${simulacionDatosActivada ? " · simulada" : ""}`
+        ? `Titulares y familiares por célula · ${lideresEnVista.length} enlaces en vista${simulacionDatosActivada ? " · simulada" : ""}`
         : `Vista territorial · ${etiquetaVistaTerritorio} · ${afiliadosPorRegionFuente.length} afiliados${simulacionDatosActivada ? " · simulada" : ""}`;
 
   const descargarExcelDetalleClasificacion = (): void => {
     const filas: (string | number)[][] = [
       [
         "#",
-        "Líder",
+        "Enlace",
         "Correo (usuario)",
         "Nivel",
         "Total",
@@ -919,7 +919,7 @@ export default function ReporteLideresClasificacion({
 
   const descargarExcelEnlacesTitularesFamiliares = (): void => {
     const filas: (string | number)[][] = [
-      ["#", "Líder", "Titulares", "Familiares", "Total", "% fam."],
+      ["#", "Enlace", "Titulares", "Familiares", "Total", "% fam."],
       ...lideresEnlacesLista.map((row, i) => {
         const t = row.conteoAfiliados ?? 0;
         const f = row.conteoFamiliares ?? 0;
@@ -1085,7 +1085,7 @@ export default function ReporteLideresClasificacion({
                     }`}
                   >
                     <Crown className="h-4 w-4 shrink-0" aria-hidden />
-                    Líderes
+                    Enlaces
                   </button>
                   <button
                     type="button"
@@ -1118,9 +1118,9 @@ export default function ReporteLideresClasificacion({
                     <>
                       <div className="rounded-lg border border-amber-300 bg-amber-50/50 px-3 py-2 text-xs leading-snug text-slate-700">
                         <span className="font-black uppercase text-amber-900">
-                          Líderes:
+                          Enlaces:
                         </span>{" "}
-                        La vista resume la clasificación por nivel de compromiso de cada líder (
+                        La vista resume la clasificación por nivel de compromiso de cada enlace (
                         {!simulacionDatosActivada
                           ? "información cargada desde el sistema"
                           : "datos ilustrativos"}
@@ -1173,7 +1173,7 @@ export default function ReporteLideresClasificacion({
                                 <Bar
                                   dataKey="cantidad"
                                   radius={[10, 10, 0, 0]}
-                                  name="Líderes"
+                                  name="Enlaces"
                                 >
                                   {datosGrafico.map((e) => (
                                     <Cell key={e.nombre} fill={e.fill} />
@@ -1238,7 +1238,7 @@ export default function ReporteLideresClasificacion({
                               </ResponsiveContainer>
                             ) : (
                               <p className="flex flex-1 items-center justify-center text-sm text-slate-500">
-                                No hay líderes para graficar.
+                                No hay enlaces para graficar.
                               </p>
                             )}
                           </div>
@@ -1307,7 +1307,7 @@ export default function ReporteLideresClasificacion({
                             <thead>
                               <tr className="border-b border-slate-100 bg-slate-50/90 text-left text-[10px] font-black uppercase tracking-wide text-slate-500 md:text-xs">
                                 <th className="px-3 py-3 md:px-4">#</th>
-                                <th className="px-3 py-3 md:px-4">Líder</th>
+                                <th className="px-3 py-3 md:px-4">Enlace</th>
                                 <th className="px-3 py-3 md:px-4">
                                   Correo (usuario)
                                 </th>
@@ -1415,13 +1415,13 @@ export default function ReporteLideresClasificacion({
                         )}
                         {ordenados.length === 0 && (
                           <p className="p-8 text-center text-sm text-slate-500">
-                            No hay líderes en el sistema.
+                            No hay enlaces en el sistema.
                           </p>
                         )}
                         {ordenados.length > 0 &&
                           ordenadosFiltrados.length === 0 && (
                             <p className="p-8 text-center text-sm text-slate-500">
-                              Ningún líder coincide con los niveles
+                              Ningún enlace coincide con los niveles
                               seleccionados.
                             </p>
                           )}
@@ -1434,7 +1434,7 @@ export default function ReporteLideresClasificacion({
                         <span className="font-black uppercase text-indigo-900">
                           Enlaces:
                         </span>{" "}
-                        La vista muestra titulares y familiares por líder y las gráficas
+                        La vista muestra titulares y familiares por enlace y las gráficas
                         asociadas a esos vínculos en la célula (
                         {!simulacionDatosActivada
                           ? "información cargada desde el sistema"
@@ -1507,7 +1507,7 @@ export default function ReporteLideresClasificacion({
                         </div>
                         <div className="rounded-2xl border border-slate-200 bg-white p-4 md:p-5">
                           <h3 className="mb-1 text-xs font-black uppercase tracking-wider text-slate-500">
-                            Líderes por tipo de vínculo
+                            Enlaces por tipo de vínculo
                           </h3>
                           <p className="mb-3 text-[11px] text-slate-500">
                             Con familiares en célula, solo titulares o sin
@@ -1564,7 +1564,7 @@ export default function ReporteLideresClasificacion({
                               </ResponsiveContainer>
                             ) : (
                               <p className="flex h-full items-center justify-center text-sm text-slate-500">
-                                Sin líderes en esta vista.
+                                Sin enlaces en esta vista.
                               </p>
                             )}
                           </div>
@@ -1575,7 +1575,7 @@ export default function ReporteLideresClasificacion({
                         <div className="flex flex-col gap-2 border-b border-slate-200 bg-slate-50 px-4 py-3 md:px-5">
                           <div>
                             <h3 className="text-xs font-black uppercase tracking-wider text-slate-600">
-                              Barras apiladas por líder
+                              Barras apiladas por enlace
                             </h3>
                             <p className="mt-1 text-[11px] font-semibold text-slate-500">
                               {PAGE_SIZE_DETALLE} por página · misma página que
@@ -1649,7 +1649,7 @@ export default function ReporteLideresClasificacion({
                             </div>
                           ) : (
                             <p className="py-12 text-center text-sm text-slate-500">
-                              Sin líderes en esta vista.
+                              Sin enlaces en esta vista.
                             </p>
                           )}
                         </div>
@@ -1724,7 +1724,7 @@ export default function ReporteLideresClasificacion({
                             <thead>
                               <tr className="border-b border-slate-100 bg-slate-50/90 text-left text-[10px] font-black uppercase tracking-wide text-slate-500 md:text-xs">
                                 <th className="px-3 py-3 md:px-4">#</th>
-                                <th className="px-3 py-3 md:px-4">Líder</th>
+                                <th className="px-3 py-3 md:px-4">Enlace</th>
                                 <th className="px-3 py-3 text-right md:px-4">
                                   Titulares
                                 </th>
@@ -1776,13 +1776,13 @@ export default function ReporteLideresClasificacion({
                         </div>
                         {datosEfectivos.length === 0 && (
                           <p className="p-8 text-center text-sm text-slate-500">
-                            No hay líderes en el sistema.
+                            No hay enlaces en el sistema.
                           </p>
                         )}
                         {datosEfectivos.length > 0 &&
                           lideresEnlacesLista.length === 0 && (
                             <p className="p-8 text-center text-sm text-slate-500">
-                              Ningún líder en la selección actual.
+                              Ningún enlace en la selección actual.
                             </p>
                           )}
                       </div>

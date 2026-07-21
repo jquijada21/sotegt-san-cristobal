@@ -78,7 +78,7 @@ export function UsuarioPageContent() {
               <td className="p-2 border-[1.5px] border-gray-300">
                 
      
-                {usuario.rol || 'Sin rol'}
+                {usuario.rol === 'LIDER' ? 'ENLACE' : (usuario.rol || 'Sin rol')}
 
               </td>
             </tr>

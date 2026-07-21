@@ -30,7 +30,7 @@ Documento de referencia para replicar en otro proyecto Next.js + Supabase todo l
 - **Next.js** (App Router)
 - **Supabase** (`@supabase/ssr`, `@supabase/supabase-js`)
 - **TanStack React Query** — cache del dashboard y mensajes
-- **Framer Motion** — animaciones (líder simulado, lista de destinatarios)
+- **Framer Motion** — animaciones (enlace simulado, lista de destinatarios)
 - **react-toastify** — notificaciones UI (via wrapper propio)
 - **web-push** — envío server-side de push
 - **@ducanh2912/next-pwa** — PWA + importScripts para push en producción
@@ -110,14 +110,14 @@ vistaCompleta = esAdminOSuper | DOCUMENTADOR;
 | Rol               | UI                                                |
 | ----------------- | ------------------------------------------------- |
 | **LIDER**         | `<Celula embedded />` directo, sin pestañas       |
-| **DOCUMENTADOR**  | Líderes, Miembros, Mensajes (sin Administrativos) |
+| **DOCUMENTADOR**  | Enlaces, Miembros, Mensajes (sin Administrativos) |
 | **ADMIN / SUPER** | Vista completa con todas las pestañas             |
 
 ### Pestañas y colores
 
 | Pestaña         | Color   | Visible para                   |
 | --------------- | ------- | ------------------------------ |
-| Líderes         | Naranja | vistaCompleta                  |
+| Enlaces         | Naranja | vistaCompleta                  |
 | Miembros        | Morado  | vistaCompleta                  |
 | Administrativos | Azul    | esAdminOSuper                  |
 | Mensajes        | Verde   | esAdminOSuper → `<Difusion />` |
@@ -152,10 +152,10 @@ Click en título **"Gestión de Datos 📊"** (solo SUPER / ADMIN / DOCUMENTADOR
 
 ### Integración
 
-- **Lideres.tsx:** Framer Motion al insertar/quitar; líder simulado va primero.
+- **Lideres.tsx:** Framer Motion al insertar/quitar; enlace simulado va primero.
 - **Celula.tsx:** prop `afiliadosSimulados` — omite API si `lider.simulado`.
 - **SignForm.tsx:** DOCUMENTADOR → skeleton 1.2s + datos precargados, sin BD.
-- **Ver.tsx:** filtra `DOCUMENTADOR` de lista de líderes visibles.
+- **Ver.tsx:** filtra `DOCUMENTADOR` de lista de enlaces visibles.
 
 ---
 

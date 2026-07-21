@@ -155,7 +155,7 @@ export function SignupForm({
     e.preventDefault();
 
     if (modoSimulacion) {
-      toast.info("Modo simulación: el usuario líder no se creó realmente.");
+      toast.info("Modo simulación: el usuario enlace no se creó realmente.");
       onSuccess();
       return;
     }
@@ -192,8 +192,8 @@ export function SignupForm({
           {isEdit
             ? "Editar Perfil de Acceso"
             : modoSimulacion
-              ? "Nuevo Usuario Líder (Simulación)"
-              : "Nuevo Usuario Líder"}
+              ? "Nuevo Usuario Enlace (Simulación)"
+              : "Nuevo Usuario Enlace"}
         </h3>
         <button
           type="button"
@@ -273,7 +273,7 @@ export function SignupForm({
               <option value="">Seleccione un rol...</option>
               {rolesParaSelector.map((r) => (
                 <option key={r.id} value={r.id.toString()}>
-                  {r.nombre}
+                  {r.nombre === "LIDER" ? "ENLACE" : r.nombre}
                 </option>
               ))}
             </select>

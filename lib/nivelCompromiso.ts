@@ -57,7 +57,7 @@ export function calcularNivelCompromiso(
       textoColor: "text-red-600 dark:text-red-400",
       bordeCard: "border-red-500 dark:border-red-500",
       gifUrl: "/gif/afiliados/gif2.gif",
-      mensaje: "🎉 ¡Líder registrado! Añade a tus familiares y amigos.",
+      mensaje: "🎉 ¡Enlace registrado! Añade a tus familiares y amigos.",
     };
   }
 
@@ -68,7 +68,7 @@ export function calcularNivelCompromiso(
       textoColor: "text-gray-500 dark:text-gray-400",
       bordeCard: "border-gray-400 dark:border-neutral-500",
       gifUrl: "/gif/afiliados/gif1.gif",
-      mensaje: `👋 ¡Hola ${nombreLider ?? "Líder"}! Inicia tu grupo registrándote a ti mismo.`,
+      mensaje: `👋 ¡Hola ${nombreLider ?? "Enlace"}! Inicia tu grupo registrándote a ti mismo.`,
     };
   }
 
